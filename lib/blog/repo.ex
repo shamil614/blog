@@ -6,6 +6,8 @@ defmodule Blog.Repo do
   DATABASE_URL environment variable.
   """
   def init(_, opts) do
-    {:ok, Keyword.put(opts, :url, System.get_env("DATABASE_URL"))}
+    # {:ok, Keyword.put(opts, :url, System.get_env("DATABASE_URL"))}
+    # already has a url set
+    {:ok, opts}
   end
 end
